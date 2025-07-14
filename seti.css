@@ -1,0 +1,87 @@
+/* Центрирующий контейнер */
+  .social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px; /* Можно изменить по необходимости */
+  }
+
+  /* Основные стили (уменьшены в 2 раза) */
+  .example-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    background-color: #000;
+    border-radius: 15px;
+    padding: 10px;
+    height: 35px;
+    width: 150px;
+    margin: 0 auto;
+  }
+
+  .example-1 .icon-content {
+    margin: 0 5px;
+    position: relative;
+  }
+
+  .example-1 .icon-content .tooltip {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    color: #000;
+    padding: 3px 5px;
+    border-radius: 3px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 7px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .example-1 .icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -25px;
+  }
+
+  .example-1 .icon-content .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .example-1 .icon-content .link:hover {
+    box-shadow: 1.5px 1px 22.5px 0px rgb(0 0 0 / 12%);
+  }
+
+  .example-1 .icon-content .link svg {
+    width: 15px;
+    height: 15px;
+    fill: currentColor;
+  }
+
+  /* Цвета при наведении */
+  .example-1 .icon-content .link[data-social="spotify"]:hover {
+    color: #00a2ff;
+  }
+
+  .example-1 .icon-content .link[data-social="pinterest"]:hover {
+    color: #ff009d;
+  }
+
+  .example-1 .icon-content .link[data-social="dribbble"]:hover {
+    color: #686868;
+  }
+
+  .example-1 .icon-content .link[data-social="telegram"]:hover {
+    color: #ffffff;
+  }
